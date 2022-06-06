@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--This page written by Steven Wilmes-->
+<html lang="en">
+  <head>
+    <meta name="description" content="" />
+    <title>New Journal Entry</title>
+    <link rel="icon" href="../resources/img/LogoSmall.png" type="image/x-icon" />
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link href="../resources/css/styles.css" rel="stylesheet" />
+
+    <script src="../resources/js/importNav.js"></script>
+    <script src="../resources/js/dateAndTime.js"></script>
+  </head>
+
+
+  <body onload="loadEntryDateTime()">
+    <!--Navigation bar-->
+    <!--  <div>
+          <nav id = "navBar">
+              <a id = "homeButton" href = "/"><img class = "homeLogo" src="../resources/img/LogoSmall.png" alt ="Home logo"></a>
+              <a class="navButton" id = "projectsButton" href = "#">My Journals</a>
+
+              <a class="navButton" id = "RButton" href = "/registration">Logout</a>
+              <a class = "navButton" id = "accountButton" href = "#"><img src="../resources/img/MeImagePNG.PNG"></a>
+          </nav>
+      </div>-->
+    <!--end of Navigation bar-->
+    <%- include('./navBar'); %>
+    <div class="container">
+      <h1>New Journal Entry</h1>
+
+      <form action="/new_entry" method="post">
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="date">Date: </label>
+          <div class="col-sm-5">
+            <input type="date" id='date' name="date" value="test"></input>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="time">Time: </label>
+          <div class="col-sm-5">
+            <input type="text" id="time" name="time" value="test" placeholder="hh:mm XM"></input>
+          </div>
+        </div>
+
+        <div class="form-group row">
+
+          <label class="col-sm-1 col-form-label" for="mood">Mood</label>
+            <div class="col-sm-4">
+              <label for="mood">Terrible</label>
+              <input type="radio" id="mood1" name="mood" value="1">
+
+              <input type="radio" id="mood2" name="mood" value="2">
+
+              <input type="radio" id="mood3" name="mood" value="3">
+
+              <input type="radio" id="mood4" name="mood" value="4">
+
+              <input type="radio" id="mood5" name="mood" value="5">
+
+              <input type="radio" id="mood6" name="mood" value="6">
+
+              <input type="radio" id="mood7" name="mood" value="7">
+              <label for="mood">Great</label>
+          </div>
+
+          <div class="col-sm-7">
+            <input type="text" placeholder="Your mood in one word" name="moodword" size="19" maxlength="19"></input>
+          </div>
+
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <textarea id="entry" name="entry" rows="10" cols="65" placeholder="How was your day?"></textarea>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-8">
+            <a href="homePage.html">
+            <input type="submit" value="Save" class="btn btn-primary btn-block"/>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <script>includeHTML();</script>
+
+  </body>
+</html>

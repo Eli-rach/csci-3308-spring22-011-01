@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <script src="../resources/js/settings.js"></script>
+    
+    <meta charset="UTF-8">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/settings.css">
+    
+    
+</head>
+<body>
+    <%- include('./navBar'); %>
+    <h1>Your ThoughtSpot Profile Settings</h1>
+    <div class="wrapper">
+            <br>
+            <h4>User Name:</h4>
+            <p id ="curruser" name="curruser"><%-curruser%></p>
+            <button class="open-button" onclick="openUsernameForm()">Change Username</button>
+            <div class="form-popup" id="usernameForm">
+                <form action="/user_settings/chuser" method="POST" class="form-container">
+                  <br>
+                  <label for="current_username"><b>Current Username:</b></label>
+                  <input type="text" placeholder="Enter Current Username" name="current_username" required>
+                  <label for="new_username"><b>New Username:</b></label>
+                  <input type="text" placeholder="Enter New Username" name="new_username" required>
+                  <br>
+                  <button type="submit" class="btn">Submit username change</button>
+                  <button type="button" class="btn cancel" onclick="closeUsernameForm()">Cancel</button>
+                  </form>
+                  </div>
+                  <br>
+                  <div>  
+                  <h4>Change Password:</h4>
+                  <button class="open-button" onclick="openPasswordForm()">Change Password</button>
+                  <div class="form-popup" id="passwordForm">
+                      <form action="/user_settings/chpass" method = "POST" class="form-container">
+                        <br>
+                        <label for="current_password"><b>Current Password:</b></label>
+                        <input type="password" placeholder="Enter Current Password" name="current_password" required>
+                        <label for="new_password"><b>New Password:</b></label>
+                        <input type="password" placeholder="Enter New Password" name="new_password" required>
+                        <label for="new_password_conf"><b>Confirm New Password:</b></label>
+                        <input type="password" placeholder="Confirm New Password" name="new_password_conf" required>
+                        <br>
+                        <button type="submit" class="btn">Submit password change</button>
+                        <button type="button" class="btn cancel" onclick="closePasswordForm()">Cancel</button> 
+                      </form>
+                  </div>
+            </div>
+            </div>
+        <br>
+        <div class="right">
+            <div class="info">
+                <div class="data">
+                    <h4>Email:</h4>
+                    <p id="curremail" name="curremail"><%-curremail%></p>
+                    <button class="open-button" onclick="openEmailForm()">Change Email</button>
+                    <div class="form-popup" id="emailForm">
+                        <form action="/user_settings/chemail" method="POST" class="form-container">
+                          <br>
+                          <label for="current_email"><b>Current Email:</b></label>
+                          <input type="email" placeholder="Enter Current Email" name="current_email" required>
+                          <br>
+                          <label for="new_email"><b>New Email:</b></label><br>
+                          <input type="email" placeholder="Enter New Email" name="new_email" required>
+                          <br>
+                          <button type="submit" class="btn">Submit email change</button>
+                          <button type="button" class="btn cancel" onclick="closeEmailForm()">Cancel</button>
+                            <br>    
+                        
+                            </form>
+                          </div>
+                </div>
+            </div>
+                <div class="data">
+                    <h4>Delete your account</h4>
+                    <button class="open-button" onclick="openDeleteAccountForm()">Delete Account</button>
+                    <div class="form-popup" id="deleteAccountForm">
+                        <form action="/user_settings/remove" method="POST" class="form-container">
+                            <br>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                  <legend class="col-form-label col-sm-12 pt-0">
+                                    <p>Are you sure you want to delete your account?</p>
+                                  </legend>
+                                  <div class="col-sm-10">
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="deleteStatus"
+                                        id="deleteStatusYes"
+                                        value="Yes"
+                                        onclick="enableButton()"
+                                        required
+                                      />
+                                      <label class="form-check-label" for="deleteStatusYes">
+                                        Yes
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="deleteStatus"
+                                        id="deleteStatusNo"
+                                        value="No"
+                                        onclick = "closeDeleteAccountForm()"
+                                      />
+                                      <label class="form-check-label" for="deleteStatusNo">
+                                        No
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            <button type="submit" class="btn" id="deleteSubmit">Confirm deletion of account</button>
+                          <button type="button" class="btn cancel" onclick="closeDeleteAccountForm()">Cancel</button>
+                            <br>    
+                        
+                            </form>
+                          </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

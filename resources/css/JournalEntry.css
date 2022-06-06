@@ -1,0 +1,271 @@
+/* Dark Orange: #F15A29 */
+/* yellow: #FBB040 */
+/*dark yellow: #F7941D*/
+/*Cream:FFDBAB */
+/* near black #161616 */
+
+*{
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+/* nav Bar start*/
+#navBarOurs {
+    font-size: 24px;
+    background-color: #F15A29;
+    border: none;
+}
+#accountButton {
+    /* padding: 1em 1.75em; */
+    width: .25em;
+}
+
+#accountButton > img{
+    width: 3em;
+    border-radius: 25%;
+}
+
+.jumbotron{
+  /*#F15A29*/
+    background-color: White;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+  /*#F15A29*/
+    border-radius: 15px 15px 15px 15px;
+    background-color: #FBB040;
+    background-size: cover;
+    height: 100%;
+    width: 90%;
+}
+
+
+
+
+
+body{
+	background-color: #ffdbab;
+    margin:0;
+    overflow-x: hidden;
+}
+.navButton {
+    font-size: 30px;
+    color: #646464;
+    height: 20px;
+    padding: 1em .5em;
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.navButton:hover {
+    color: #161616;
+}
+
+#RButton{
+    float:right;
+}
+
+
+.homeLogo {
+    padding: 15px 15px;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+input[type=submit]{
+    background-color: #F15A29;
+    border: 2px solid black;
+}
+
+input[type=submit]:hover{
+    background-color: #F15A29;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+
+.vl {
+    border-left: 6px solid #161616;
+    height: 100%;
+    float: right;
+    grid-column: 3;
+
+    margin-left: 100%;
+  }
+
+@media only screen and (min-width: 400px) {
+
+    .overallContainer{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #newJournalButton{
+        font-size: 1.5em;
+        text-decoration: none;
+        background-color: #F7941D;
+        padding: 20px;
+        color: #161616;
+        text-align: center;
+        margin-left: 33%;
+        margin-right:auto ;
+        display: inline-block;
+        border-radius: 30px;
+    }
+
+    .journalItem{
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-right-color: #161616;
+        border-bottom-color: #161616;
+        display: grid;
+        grid-template-columns: 90% 5% 5%;
+    }
+
+    .journalName{
+        padding-left: 2%;
+        font-size: 3em;
+    }
+    .journalItem >  img{
+        padding-top: 33%;
+        height: 1.5em;
+
+    }
+
+    .shareButton{
+        grid-column: 3;
+    }
+
+    .menuButton{
+        grid-column: 2;
+    }
+
+    .leftBar{
+        display: grid;
+        grid-row: 1/20;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 160% 40%;
+        row-gap: 2%;
+        border-right-color: #161616;
+        border-right-style: solid ;
+        height:100%;
+
+    }
+
+
+
+    .journalLogo{
+        margin-top: 3%;
+        grid-column: 2;
+        grid-row: 1;
+        background-color: white;
+        border-radius: 100%;
+
+    }
+
+    .details{
+        grid-column: 2;
+        grid-row: 2;
+        display: grid;
+    }
+
+    .details > #cJournalName{
+        margin-bottom: 5%;
+        text-align: center;
+        font-size: 2em;
+    }
+    .details > p{
+        margin-bottom: 2%;
+        margin-left: 20%;
+        font-size: 1em;
+    }
+
+/*Start of userSettings css*/
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    /* opacity: 0.8; */
+    position: relative;
+  }
+
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: center;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+/* End of userSettings css*/
+
+}

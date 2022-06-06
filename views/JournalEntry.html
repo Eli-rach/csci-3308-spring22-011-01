@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--This page written by Sam Erstad-->
+<html lang="en">
+
+
+  <head>
+
+    <meta name="description" content="" />
+    <title>New Journal Entry</title>
+    <link rel="icon" href="../resources/img/LogoSmall.png" type="image/x-icon" />
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+
+    />
+    <link href="../resources/css/JournalEntry.css" rel="stylesheet" />
+
+    <script src="../resources/js/importNav.js"></script>
+    <script src="../resources/js/JournalEntryScript.js"></script>
+  </head>
+
+  <body onload="loadJournalEntry()">
+    <!--Navigation bar-->
+      <div>
+          <nav id = "navBar">
+              <a id = "homeButton" href = "/"><img class = "homeLogo" src="../resources/img/LogoSmall.png" alt ="Home logo"></a>
+              <a class="navButton" id = "projectsButton" href = "#">My Journals</a>
+
+              <a class="navButton" id = "RButton" href = "/registration">Logout</a>
+              <a class = "navButton" id = "accountButton" href = "#"><img src="../resources/img/MeImagePNG.PNG"></a>
+          </nav>
+      </div>
+      <br>
+    <!--end of Navigation bar-->
+  <div class="container">
+      <h3>Journal Entry : <span id="entryNum"></span></h3>
+        <div class="row">
+          <div class="col-sm-6" style="background-color:White;">Date: <span id="journalDate"> </span></div>
+          <div class="col-sm-6" style="background-color:White;">Time: <span id="journalTime"> </span></div>
+          <div class="col-sm-12" style="background-color:White;">Mood: <span id="journalMood"> </span></div>
+          <div class="col-sm-12" style="background-color:White;">Mood Description: <span id="journalMoodDesc"> </span></div>
+
+        </div>
+        <br>
+      <div class="jumbotron">
+
+    <p><span id="journalText"> </span></p>
+    <br>
+    <br> <!--Moves buttons down-->
+    <br>
+    <br>
+
+  </div>
+  <div class="btn-group">
+  <button type="button" class="btn btn-primary">Previous Journal</button>
+  <button type="button" class="btn btn-primary">Next Journal</button>
+</div>
+<p></p>
+<br>
+  </div>
+
+
+    <script>includeHTML();</script>
+
+  </body>
+</html>

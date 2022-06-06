@@ -1,0 +1,189 @@
+/* Dark Orange: #F15A29 */
+/* yellow: #FBB040 */
+/*dark yellow: #F7941D*/
+/*Cream:FFDBAB */
+/* near black #161616 */
+ 
+*{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* nav Bar start*/
+#navBar {
+    font-size: 24px;
+    background-color: #F15A29;
+    height: 10vh;
+    border: none;
+    text-align:left;
+}
+#accountButton {
+    /* padding: 1em 1.75em; */
+    width: .25em;
+}
+ 
+#accountButton > img{
+    width: 3em;
+    border-radius: 25%;
+}
+ 
+body{
+    background-image: url('../resources/img/LogoBig.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #ffdbab;
+    text-align: center;
+    margin:0;
+    overflow-x: hidden;
+}
+.navButton {
+    font-size: 30px;
+    color: #646464;
+    height: 20px;
+    padding: 2vh;
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+    display:inline-block;
+    vertical-align:top;
+    text-align:left;
+}
+ 
+.navButton:hover {
+    color: #161616;
+}
+ 
+.RButton{
+    float:right;
+}
+ 
+ 
+.homeLogo {
+    padding:  .5vw;
+    height: 10vh;
+}
+ 
+.vl {
+    height: 100%;
+    float: right;
+    grid-column: 3;
+   
+    margin-left: 100%;
+  }
+ 
+@media only screen and (min-width: 400px) {
+   
+    .overallContainer{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+   
+
+/*
+    .LBItem{
+        padding: 20px 10px;
+        background-color: #161616;
+        text-align: center;
+        border-right: #161616;
+    }*/
+ 
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: center;
+    /*text-align: center;*/
+  }
+
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    /* opacity: 0.8; */
+    text-align: center;
+    position: relative;
+  }
+
+    /* The popup form - hidden by default */
+    .form-popup {
+        display: none;
+        position: relative;
+        bottom: 0;
+        right: 15px;
+        z-index: 9;
+        text-align: center;
+        left:42%;
+
+      }
+      
+      /* Add styles to the form container */
+      .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+        position: center;
+        text-align: center;
+
+      }
+      
+      /* Full-width input fields */
+      .form-container input[type=text], .form-container input[type=text] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        position: center;
+        text-align: center;
+
+      }
+      
+      /* When the inputs get focus, do something */
+      .form-container input[type=text]:focus, .form-container input[type=text]:focus {
+        background-color: #ddd;
+        outline: none;
+        position: center;
+        text-align: center;
+
+      }
+      
+      /* Set a style for the submit/login button */
+      .form-container .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+        position: center;
+        text-align: center;
+        font-size:20px;
+
+      }
+      
+      /* Add a red background color to the cancel button */
+      .form-container .cancel {
+        background-color: red;
+      }
+      
+      /* Add some hover effects to buttons */
+      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }
+    

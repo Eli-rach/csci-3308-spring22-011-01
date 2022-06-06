@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../resources/css/styles.css">
+        <script src="../resources/js/importNav.js"></script>
+    </head>
+    <body>
+        <div w3-include-html="navBar.html"></div>
+        <div class = "overallContainer">
+            <div class="leftBar">
+                <div class = details>
+                    <h2 id = "cJournalName">Journal Name</h2>
+                    <p id = "cLastEdited">Last Edited:</p>
+                    <p id = "cMood">Journal Mood:</p>
+                    <form action = "/journal/:id" 
+                </div>
+                <div class="vl"></div>
+
+            </div>
+            <div class = "mainBar">
+                <div class = "journalItem">
+                    <p class = "journalName">Journal 1</p>
+                    <img class = "menuButton" src = "../resources/img/dottedMenu.png">
+                    <!-- <img class = "shareButton"src = "../resources/img/shareButton.png"> -->
+                </div>
+                
+                <div class = "journalItem">
+                    <p class = "journalName">Journal 2</p>
+                    <img class = "menuButton" src = "../resources/img/dottedMenu.png">
+                    <!-- <img class = "shareButton"src = "../resources/img/shareButton.png"> -->
+                </div>
+                <div class = "journalItem">
+                    <p class = "journalName">Journal 3</p>
+                    <img class = "menuButton" src = "../resources/img/dottedMenu.png">
+                    <!-- <img class = "shareButton"src = "../resources/img/shareButton.png"> -->
+                </div>
+                <a href = "../new_entry.html"><h4 id = "newJournalButton">New Journal</h4></a>
+                <div class = "space"></div>
+            </div> 
+            
+            
+        </div>
+        <script>
+            includeHTML();
+        </script>
+    </body>
+</html>

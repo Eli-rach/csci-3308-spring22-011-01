@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--This page written by Sam Erstad and Steven Wilmes-->
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <title>New Journal Entry</title>
+    <link rel="icon" href="../resources/img/LogoSmall.png" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    >
+ 
+    <script src="../resources/js/importNav.js"></script>
+    <script src="../resources/js/JournalEntryScript.js"></script>
+    <script>
+        function loadJournalEntry(data){
+            document.getElementById('journalTime').innerHTML = data.entry_time;
+            document.getElementById('journalDate').innerHTML = data.entry_date;
+            document.getElementById('journalMood').innerHTML = data.entry_mood;
+            document.getElementById('journalMoodDesc').innerHTML = data.entry_mood_word;
+            document.getElementById('journalText').innerHTML = data.entry_description;
+        }
+    </script>
+    <link rel="stylesheet" href="../resources/css/styles.css">
+  </head>
+
+  <body style="background-color:#ffdbab;">
+    <!--Navigation bar-->
+      <%- include('./navBar'); %>
+    <!--end of Navigation bar-->
+  <div class="container" style="border-radius: 15px 15px 15px 15px;
+  background-color: #FBB040;
+  background-size: cover;
+  height: 100%;
+  width: 90%;">
+      <h3>Journal Entry : <span id="entryNum"></span></h3>
+        <div class="row">
+          <div class="col-sm-6" style="background-color:White;">Date: <%-entry.entry_date.toDateString()%><span id="journalDate"> </span></div>
+          <div class="col-sm-6" style="background-color:White;">Time: <%-entry.entry_time%><span id="journalTime"> </span></div>
+          <div class="col-sm-12" style="background-color:White;">Mood: <%-entry.entry_mood%><span id="journalMood"> </span></div>
+          <div class="col-sm-12" style="background-color:White;">Mood Description: <%-entry.entry_mood_word%><span id="journalMoodDesc"> </span></div>
+
+        </div>
+        <br>
+      <div class="jumbotron"style="background-color:White;">
+
+    <p><span id="journalText"> <%-entry.entry_description%></span></p>
+    <br>
+    <br> <!--Moves buttons down-->
+
+
+  </div>
+    <div class="btn-group">
+    </div>
+    <p></p>
+  </div>
+
+
+    <script>includeHTML();</script>
+    <script src="../resources/js/importNav.js"></script>
+  </body>
+</html>
